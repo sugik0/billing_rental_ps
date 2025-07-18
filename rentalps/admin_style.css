@@ -1,0 +1,206 @@
+/* =================================================================== */
+/* GAYA UMUM HALAMAN ADMIN
+/* =================================================================== */
+body {
+    background-color: #e9ecef; /* Warna latar belakang halaman admin */
+}
+
+.admin-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.admin-container h2 {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.admin-container p {
+    color: #6c757d;
+    font-size: 0.95em;
+    margin-top: -10px;
+    margin-bottom: 25px;
+}
+
+/* =================================================================== */
+/* HEADER DAN TOMBOL NAVIGASI ATAS
+/* =================================================================== */
+.info-kasir {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.tombol-kembali,
+.tombol-logout {
+    display: inline-block;
+    padding: 8px 15px;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.9em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Tombol Kembali ke Dashboard (Abu-abu Netral) */
+.tombol-kembali {
+    background-color: #6c757d; 
+}
+.tombol-kembali:hover {
+    background-color: #5a6268;
+}
+
+/* Tombol Logout (Merah) */
+.tombol-logout {
+    background-color: #dc3545;
+}
+.tombol-logout:hover {
+    background-color: #c82333;
+}
+
+
+/* =================================================================== */
+/* NAVIGASI TAB
+/* =================================================================== */
+.admin-nav {
+    display: flex;
+    border-bottom: 2px solid #dee2e6;
+    margin-bottom: 25px;
+}
+.admin-nav-link {
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #495057;
+    font-weight: bold;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.2s ease;
+}
+.admin-nav-link.active, .admin-nav-link:hover {
+    color: #007bff;
+    border-bottom-color: #007bff;
+}
+
+/* KONTEN TAB */
+.admin-tab-content {
+    display: none;
+}
+.admin-tab-content.active {
+    display: block;
+}
+
+/* =================================================================== */
+/* GAYA TABEL
+/* =================================================================== */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+.admin-table th, .admin-table td {
+    border: 1px solid #dee2e6;
+    padding: 12px 15px;
+    text-align: left;
+    vertical-align: middle;
+}
+.admin-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+.admin-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+.admin-table button {
+    padding: 6px 12px;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.admin-table .btn-edit {
+    background-color: #ffc107;
+    color: #212529;
+}
+.admin-table .btn-hapus-konsol, .admin-table .btn-hapus-kasir {
+    background-color: #dc3545;
+    color: white;
+}
+.status-chip {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+.status-chip.status-aktif { background-color: #28a745; }
+.status-chip.status-nonaktif { background-color: #6c757d; }
+
+/* =================================================================== */
+/* GAYA FORM
+/* =================================================================== */
+.admin-form {
+    border: 1px solid #dee2e6;
+    padding: 25px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    background-color: #fdfdfd;
+}
+.admin-form h3 {
+    grid-column: 1 / -1;
+    margin: 0 0 15px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+.admin-form input, .admin-form select {
+    width: 95%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    font-size: 1em;
+}
+.admin-form .form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* =================================================================== */
+/* GAYA LAPORAN
+/* =================================================================== */
+.admin-form-inline {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+#area-laporan h3 { 
+    margin-top: 25px; 
+}
+.laporan-total {
+    text-align: right;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #343a40;
+}
